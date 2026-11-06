@@ -31,6 +31,21 @@ class Repositorymensagems {
     const mensagems = await this.db(sql, values);
     return { receptor_id, emissorId, texto };
   }
+
+  async editarMensagem(id, body) {
+    const { texto } = body;
+    const sql = "UPDATE mensagem SET texto = $1 WHERE id = $2";
+    const values = [texto, id];
+    const mensagems = await this.db(sql, values);
+    return { id, texto };
+  }
+  
+  async deletarMensagem(id) {
+    const sql = "DELETE FROM mensagem WHERE id = $1";
+    const values = [id];
+    const mensagems = await this.db(sql, values);
+    return { id };
+  }
 }
 
 const repositorymensagems = new Repositorymensagems();

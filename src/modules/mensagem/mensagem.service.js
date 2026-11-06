@@ -11,6 +11,14 @@ class Servicemensagems {
     const mensagen = repositorymensagems.enviarMensagem(emissorId, body);
     return mensagen;
   }
+  async editarMensagem(id, body){
+    const mensagen = repositorymensagems.editarMensagem(id, body);
+    return mensagen;
+  }
+  async deletarMensagem(id){
+    const mensagen = repositorymensagems.deletarMensagem(id);
+    return mensagen;
+  }
 }
 
 const servicemensagems = new Servicemensagems();

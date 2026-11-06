@@ -10,7 +10,7 @@ routermensagem.get(
 routermensagem.post("/mensagem/:emissorId",controllermensagem.enviarMensagem);
 
 routermensagem.put("/mensagem/:id",controllermensagem.editarMensagem);
-/*
-routermensagem.delete("/mensagem",);
- */
+
+routermensagem.delete("/mensagem/:id",controllermensagem.deletarMensagem);
+ 
 export default routermensagem;

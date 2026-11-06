@@ -20,6 +20,11 @@ class Controllermensagem {
     const mensagem = await servicemensagems.editarMensagem(id, req.body);
     return res.send(mensagem);
   }
+  async deletarMensagem(req, res) {
+    const {id} = req.params;
+    const mensagem = await servicemensagems.deletarMensagem(id);
+    return res.send(mensagem);
+  }
 }
 
 const controllermensagem = new Controllermensagem();
