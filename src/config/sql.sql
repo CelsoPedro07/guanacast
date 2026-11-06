@@ -14,7 +14,7 @@ CREATE TABLE usuario (
     data_nascimento DATE
 );
 
--- Tabela de Mensagens
+-- Tabela de mensagems
 CREATE TABLE mensagem (
     id           UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     emissor_id   UUID NOT NULL,
